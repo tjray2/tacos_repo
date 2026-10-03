@@ -6,25 +6,27 @@ models:
     columns:
       - name: customer_id
         data_tests:
-        - unique
-        - not_null
+          - unique
+          - not_null
+  
   - name: stg_square__orders
     columns:
       - name: order_id
         data_tests:
-        - unique
-        - not_null
+          - unique
+          - not_null
+  
   - name: stg_salesforce__trucks
     columns:
       - name: truck_id
         data_tests:
-        - unique
-        - not_null
-  - name: make
-    data_tests:
-    - accepted_values:
-        arguments:
-          values: ['Airstream',
+          - unique
+          - not_null
+      - name: make
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Airstream',
                   'Chevrolet',
                   'Custom',
                   'Citroen',
